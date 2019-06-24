@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Fob Access System</title>
+	<script type="text/javascript" src="fobs.js" ></script>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style type="text/css">
+		.removedValue, .newValue, .unchangedValue {
+			padding:0 5px 0 5px;
+		}
+		.removedValue {
+			text-decoration: line-through;
+			color:red;
+		}
+		.newValue {
+			color:green;
+		}
+		.unchangedValue {
+			
+		}
+	</style>
+</head>
+<body>
+	<h1>Kantech / SCM reconsiliation</h1>
+	<div class="container-fluid">
+		<div class="row flex-xl-nowrap">
+			<div class="col-1">
+				MENU!
+			</div>
+			<main class="col-11">
+				<div class="container">
+					<h2>Upload Files</h2>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="SCMExportText">SCM Export</span>
+						</div>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="SCMExport" aria-describedby="SCMExportText">
+							<label class="custom-file-label" for="SCMExport">Choose file</label>
+						</div>
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="KantechExportText">Kantech Export</span>
+						</div>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="KantechExport" aria-describedby="KantechExportText">
+							<label class="custom-file-label" for="KantechExport">Choose file</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<h2>Consolodation</h2>
+					<h4>Unknown Cards</h4>
+					<h5>In Kantech, not in SCM</h5>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<th>Card Number</th>
+							<th>Name</th>
+							<th>SCM Member</th>
+							<th>Action</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01:00046</td>
+								<td>ALEX MAXWELL</td>
+								<td>Alexander Maxwell</td>
+								<td>Approve / unapprove / reject</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h5>In SCM, not in Kantech</h5>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<th>Name</th>
+							<th>Kantech Member</th>
+							<th>Card Number</th>
+							<th>Action</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>New Guy</td>
+								<td>New Guy</td>
+								<td>01:00046</td>
+								<td>Approve / unapprove / reject</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4>Access Level Changes</h4>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<th>Name</th>
+							<th>Old Access Level</th>
+							<th>New Access Level</th>
+							<th>Action</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Heather Drugge</td>
+								<td>Standard</td>
+								<td>Exec</td>
+								<td>Approve / unapprove / reject</td>
+							</tr>
+						</tbody>
+					</table>			
+
+				</div>
+				<div class="container">
+					<h2>Updates</h2>
+					<h4>SCM</h4>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<th>Name</th>
+							<th>Removed Cards</th>
+							<th>Added Cards</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Heather Drugge</td>
+								<td>01:00003, 01:00009, 01:00010</td>
+								<td>5A:21111, 5A:21112, 80:09886, 80:09887, 80:09890</td>
+							</tr>
+						</tbody>
+					</table>			
+					<h4>Kantech</h4>
+
+					<table class="table table-bordered table-striped">
+						<thead>
+							<th>UserID</th>
+							<th>Name</th>
+							<th>Card info 1</th>
+							<th>Card info 2</th>
+							<th>Card info 3</th>
+							<th>Access Level</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01:00022</td>
+								<td><span class="unchangedValue">Heather Drugge</span><span class="removedValue"></span><span class="newValue"></span></td>
+								<td><span class="unchangedValue"></span><span class="removedValue">Daniel Campbell</span><span class="newValue"></span></td>
+								<td><span class="unchangedValue"></span><span class="removedValue"></span><span class="newValue"></span></td>
+								<td><span class="unchangedValue"></span><span class="removedValue"></span><span class="newValue"></span></td>
+								<td><span class="unchangedValue"></span><span class="removedValue"></span><span class="newValue">Executive</span></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+
+				</div>
+				<div class="container">
+					<h2>Download Update Files</h2>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend" id="button-addon3">
+						<button class="btn btn-outline-secondary" type="button">Download SCM Update</button>
+						<button class="btn btn-outline-secondary" type="button">Download Kantech Update</button>
+						</div>
+						<input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons" aria-describedby="button-addon3">
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</body>
+</html>
